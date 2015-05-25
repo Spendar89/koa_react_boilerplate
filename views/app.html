@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+        <link rel="stylesheet" href="/css/app.css" />
+    </head>
+    <body>
+        <div id="root">
+          <div>
+            {{{component.string}}}
+          </div>
+        </div>
+    </body>
+    <script type="text/javascript">
+      window.COMPONENT_NAME = "{{{component.name}}}"
+      window.PROPS = {{{component.props}}}
+    </script>
+    <script src="/js/bundle.js"></script>
+</html>

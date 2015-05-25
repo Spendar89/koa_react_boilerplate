@@ -1,7 +1,10 @@
-require('./lib/globals.js');
-var App = require('./components/app.jsx');
+require('./../config/globals.js');
+
+var components = require('./../config/components.js'),
+    componentName = window.componentName || "default",
+    Component = components[window.COMPONENT_NAME];
 
 React.render(
-    <App text="and I'm the app text playa!" />, 
-    document.getElementById('app')
+    React.createElement(Component, window.PROPS),
+    document.getElementById('root')
 );

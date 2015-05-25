@@ -1,8 +1,10 @@
 {
-  "name": "app_app",
+  "name": "koa_react_boilerplate",
   "version": "0.0.1",
-  "description": "A basic template for node apps",
-  "repository": "none",
+  "description": "Koa/React isomorphic app boilerplate",
+  "repository": {
+      "type": "git"
+  },
   "scripts": {
     "watchSass": "sass --watch assets/scss/app.scss:public/css/app.css",
     "watchJs": "watchify -t reactify -t envify client/app.js -o public/js/bundle.js",
@@ -10,7 +12,8 @@
     "buildJs": "source ~/.zshrc && browserify -t reactify -t envify client/app.js -o public/js/bundle.js",
     "buildSass": "sass assets/scss/app.scss:public/css/app.css",
     "build": "npm run buildJs && npm run buildSass",
-    "start": "gulp start"
+    "start": "gulp start",
+    "dev": "npm start && npm run watch"
   },
   "dependencies": {
     "async": "^0.9.0",
@@ -21,6 +24,7 @@
     "co-monk": "^1.0.0",
     "envify": "^3.4.0",
     "express": "^4.12.0",
+    "handlebars": "^3.0.3",
     "jquery": "^2.1.4",
     "koa": "^0.21.0",
     "koa-compose": "^2.3.0",
@@ -30,6 +34,7 @@
     "koa-views": "^3.0.0",
     "lodash": "^3.2.0",
     "monk": "^1.0.1",
+    "node-jsx": "^0.13.3",
     "react": "^0.13.3",
     "react-router": "^0.13.3",
     "react-spinner": "^0.2.1",
